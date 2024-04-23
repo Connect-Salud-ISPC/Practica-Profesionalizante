@@ -1,8 +1,9 @@
 # Connectt-Salud-Pract-Profesionalizante-2024-ISPC
 Desarrollo de la Práctica Profesionalizante como módulo de la carrera de Técnico en Desarrollo Web y App Digitales. Sitio Web de Cuidado de la Salud, Monitoreo de Peso, Información sobre hábitos saludables, recetas y venta de planes alimentarios. App de Turnero para Connect Salud.
 
-Basada en:
-https://github.com/samirasanchez1/Proyecto-Integrador-ISPC
+Basada en repositorios de la organización: 
+https://github.com/Connect-Salud-ISPC
+
 
 Miembros del Grupo:
 
