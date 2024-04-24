@@ -2,8 +2,11 @@
 Desarrollo de la Práctica Profesionalizante como módulo de la carrera de Técnico en Desarrollo Web y App Digitales. Sitio Web de Cuidado de la Salud, Monitoreo de Peso, Información sobre hábitos saludables, recetas y venta de planess alimentarios. App de Turnero para Connect Salud.
 
 Basada en repositorios de la organización: 
+
 https://github.com/Connect-Salud-ISPC
+
 https://github.com/jhonnymonte/Fullstack-ISPC-2022
+
 https://github.com/samirasanchez1/Proyecto-Integrador-ISPC
 
 
