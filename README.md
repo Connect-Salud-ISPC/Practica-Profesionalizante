@@ -3,6 +3,8 @@ Desarrollo de la Práctica Profesionalizante como módulo de la carrera de Técn
 
 Basada en repositorios de la organización: 
 https://github.com/Connect-Salud-ISPC
+https://github.com/jhonnymonte/Fullstack-ISPC-2022
+https://github.com/samirasanchez1/Proyecto-Integrador-ISPC
 
 
 Miembros del Grupo:
