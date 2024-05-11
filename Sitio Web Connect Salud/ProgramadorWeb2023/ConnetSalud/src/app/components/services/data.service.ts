@@ -6,7 +6,7 @@ import { User } from 'src/app/interfaces/user';
 })
 export class DataService {
 
-  API_URL = 'http://127.0.0.1:8000/';
+  API_URL = 'https://apisconnect-bmm2.onrender.com/';
 
   constructor(private http: HttpClient) { }
 

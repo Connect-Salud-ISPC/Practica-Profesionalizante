@@ -15,7 +15,7 @@ const httpOptions = {
 })
 export class AuthService {
   
-  api_url: string = 'http://127.0.0.1:8000/';
+  api_url: string = 'https://apisconnect-bmm2.onrender.com/';
   f: any;
 
   registerUser(userData: any): Observable<any>{
