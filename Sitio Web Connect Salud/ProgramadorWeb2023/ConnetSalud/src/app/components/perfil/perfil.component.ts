@@ -1,83 +1,55 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
-
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-
 export class PerfilComponent implements OnInit {
-  profile: any;
+  profile: any = {};
   isLoading: boolean = false;
   updateSuccess: boolean = false;
   updateError: boolean = false;
   editing: boolean = false;
-
-  constructor(private userService: UserService ) { }
-
+  constructor(private userService: UserService) { }
   ngOnInit(): void {
-   this.loadProfile();
-}
-
+    this.loadProfile();
+  }
   loadProfile(): void {
-   this.isLoading = true;
-   this.userService.getUser().subscribe(
-     response => {
-       this.profile = response;
-       this.isLoading = false;
-     },
-     error => {
-       console.log(error);
-       this.isLoading = false;
-     }
-  );
-}
-
-
-updateProfile(): void {
-  this.isLoading = true;
-  this.updateSuccess = false;
-  this.updateError = false;
-
-  this.userService.updateProfile(this.profile).subscribe(
-    response => {
-    this.profile = response;
-    this.isLoading = false;
-    this.updateSuccess = true;
-   },
-   error => {
-     console.log(error);
-     this.isLoading = false;
-     this.updateError = true;
-   }
-  );
-}
-
-startEdit(): void {
-  this.editing = true;
-}
-
-cancelEdit(): void {
-  this.editing = false;
-}
-
-saveChanges(): void {
-  this.isLoading = true;
-  this.updateSuccess = false;
-  this.updateError = false;
-  this.userService.updateProfile(this.profile).subscribe(
-response => {
-  this.profile = response;
-  this.isLoading = false;
-  this.updateSuccess = true;
-  this.editing = false; // Salir del modo de edición después de guardar los cambios
-},
-error => {
-  console.log(error);
-  this.isLoading = false;
-  this.updateError = true;
-   }
-  );
- }
+    this.isLoading = true;
+    this.userService.getUser().subscribe(
+      data => {
+        this.profile = data;
+        this.isLoading = false;
+      },
+      error => {
+        console.error('Error al cargar el perfil', error);
+        this.isLoading = false;
+      }
+    );
+  }
+  updateProfile() {
+    this.editing = true;
+  }
+  startEdit(): void {
+    this.editing = true;
+  }
+  cancelEdit() {
+    this.editing = false;
+    this.loadProfile(); // Recargar los datos originales si se cancela la edición
+  }
+  saveChanges() {
+    this.userService.updateProfile(this.profile).subscribe({
+      next: (data) => {
+        this.updateSuccess = true;
+        this.editing = false;
+        // Actualizar datos del perfil si es necesario
+        this.profile = data;
+      },
+      error: (error) => {
+        console.error('Error al actualizar el perfil', error);
+        this.updateError = true;
+      }
+    });
+  }
 }
