@@ -9,14 +9,13 @@ import { AuthStateService } from '../services/auth-state.service';
 })
 export class HeaderComponent {
 
-    constructor( private authService: AuthService, private authStateService: AuthStateService )
-{}
+  constructor( private authService: AuthService, private authStateService: AuthStateService ) {} 
+  
+  logout() { 
+    this.authService.logout(); 
+  }
 
-    logout() {
-      this.authService.logout();
-}
-
-    isLoggedIn() {
-  return this.authStateService.isUserLoggedIn();
-}
-}
+  isLoggedIn() { 
+    return this.authStateService.isUserLoggedIn(); 
+  } 
+} 
