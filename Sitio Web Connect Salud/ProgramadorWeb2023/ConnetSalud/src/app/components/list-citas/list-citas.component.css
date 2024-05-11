@@ -1,0 +1,37 @@
+.table-responsive {
+    overflow-x: auto;
+    /* Habilita el desplazamiento horizontal cuando sea necesario */
+    margin: 0 20px;
+    /* Agrega un poco de margen lateral para la estética */
+}
+
+table {
+    width: 100%;
+    /* Asegura que la tabla use todo el ancho disponible */
+    border-collapse: collapse;
+    /* Opcional: Para un diseño más compacto y limpio */
+}
+
+th,
+td {
+    padding: 8px;
+    /* Espaciado interno para celdas */
+    text-align: left;
+    /* Alineación del texto */
+}
+
+th {
+    background-color: #f4f4f4;
+    /* Color de fondo para el encabezado */
+}
+
+@media screen and (max-width: 600px) {
+
+    th,
+    td {
+        padding: 2px;
+        /* Menor padding */
+        font-size: 15px;
+        /* Menor tamaño de fuente */
+    }
+}
