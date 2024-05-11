@@ -22,15 +22,16 @@ export class CarritoComponent implements OnInit {
   }
   
   iniciarCompra() {
-    const createPaymentUrl = 'http://127.0.0.1:8000/createpayment/'; // La URL de tu API en Django
-    
+    const createPaymentUrl = 'https://apisconnect-bmm2.onrender.com/createpayment/'; // La URL de tu API en Django
+
     this.httpclient.post<any>(createPaymentUrl, {}).subscribe(response => {
       const paymentUrl = response.payment_url;
-      window.location.href = paymentUrl; // Redirigir directamente utilizando el objeto window
+      window.open(paymentUrl, '_blank'); // Abrir en una nueva pestaña
       // O utilizar el enrutador de Angular
       // this.router.navigateByUrl(paymentUrl);
     });
   }
 }
+    
 
 

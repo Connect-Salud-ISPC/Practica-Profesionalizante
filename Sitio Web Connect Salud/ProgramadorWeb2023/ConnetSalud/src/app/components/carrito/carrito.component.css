@@ -45,3 +45,18 @@ tr.selected {
 .boton-finalizar{
   text-align: center;
 }
+
+/* @media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  th, td {
+    padding: 5px;
+    text-align: center;
+  }
+  .container {
+    padding: 20px;
+  }
+}

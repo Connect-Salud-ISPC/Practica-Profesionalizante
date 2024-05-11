@@ -6,9 +6,11 @@ import { Injectable } from '@angular/core';
 export class CartService {
 
   private products: any[] = [
-    { name: 'Basico', price:  1000, image: '../assets/img/Basico.png' },
-    { name: 'Intermedio', price:  1500, image: '../assets/img/Intermedio.png' },
-    { name: 'Avanzado', price:  3000, image: '../assets/img/Intensivo.png' }
+    { name: 'Basico', price: 1000, image: '../assets/img/Basico.png' },
+    { name: 'Estandar', price: 2000, image: '../assets/img/Estandar.png' },
+    { name: 'Plus', price: 3500, image: '../assets/img/Plus.png' },
+    { name: 'Premiun', price: 5000, image: '../assets/img/Premiun.png' },
+    { name: 'Corporativo', price: 8500, image: '../assets/img/Corporativo.png' },
   ];
   
 
