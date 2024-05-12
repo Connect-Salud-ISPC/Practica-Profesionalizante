@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
 import { app_routing } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,38 +26,38 @@ import { AuthService } from './components/services/auth.service';
 import { AuthStateService } from './components/services/auth-state.service';
 import { UserService } from './components/services/user.service';
 @NgModule({
-declarations: [
-AppComponent,
-HeaderComponent,
-FooterComponent,
-InicioComponent,
-ContactoComponent,
-PlanesComponent,
-RecetasComponent,
-LoginComponent,
-RegisterComponent,
-MonitoreodepesoComponent,
-CarritoComponent,
-EditCitasComponent,
-ListCitasComponent,
-TurnosComponent,
-ListUsersComponent,
-PerfilComponent,
-EditUsersComponent,
-],
-imports: [
-BrowserModule,
-app_routing,
-FormsModule,
-ReactiveFormsModule,
-HttpClientModule,
-],
-providers: [
-AuthGuard,
-AuthService,
-AuthStateService,
-UserService,
-],
-bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        InicioComponent,
+        ContactoComponent,
+        PlanesComponent,
+        RecetasComponent,
+        LoginComponent,
+        RegisterComponent,
+        MonitoreodepesoComponent,
+        CarritoComponent,
+        EditCitasComponent,
+        ListCitasComponent,
+        TurnosComponent,
+        ListUsersComponent,
+        PerfilComponent,
+        EditUsersComponent,
+    ],
+    imports: [
+        BrowserModule,
+        app_routing,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+    ],
+    providers: [
+        AuthGuard,
+        AuthService,
+        AuthStateService,
+        UserService,
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

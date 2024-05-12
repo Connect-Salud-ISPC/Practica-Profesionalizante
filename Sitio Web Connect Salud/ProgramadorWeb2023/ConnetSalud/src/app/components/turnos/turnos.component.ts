@@ -11,7 +11,7 @@ export class TurnosComponent implements OnInit {
   angForm: FormGroup;
 
   constructor(
-    @Inject(FormBuilder) private fb: FormBuilder,
+    private fb:FormBuilder, 
     private dataService: DataService,
     private route: Router) 
     {

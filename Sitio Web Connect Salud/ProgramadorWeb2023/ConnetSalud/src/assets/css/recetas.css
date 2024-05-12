@@ -56,3 +56,12 @@
     font-size: 55px;
     color: black;
 }
+
+/* Media query para pantallas menores de 600px */
+@media (max-width: 600px) {
+    #tiposDeRecetas {
+        flex-direction: column; /* Cambia la dirección del flex a vertical */
+        padding: 5%; /* Reduce el padding */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+}

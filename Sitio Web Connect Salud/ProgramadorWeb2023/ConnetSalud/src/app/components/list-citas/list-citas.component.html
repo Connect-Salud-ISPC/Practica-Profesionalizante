@@ -24,8 +24,8 @@
                     <td>{{user.fecha}}</td>
                     <td>{{user.hora}}</td>
                     <td>{{user.mensaje}}</td>
-                    <td><button (click)="deleteCitas(user.id_paciente)" class="btn btndanger">Borrar</button></td>
-                    <td><button [routerLink]="['/edit/', user.id_paciente]" class="btn btnsuccess">Editar</button></td>
+                    <td><button (click)="deleteCitas(user.id_paciente)" class="btn btn-danger">Borrar</button></td>
+                    <td><button [routerLink]="['/edit/', user.id_paciente]" class="btn btn-success">Editar</button></td>
                 </tr>
             </tbody>
         </table>
