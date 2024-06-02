@@ -55,7 +55,7 @@ public class Home extends AppCompatActivity {
 
     // Método para lanzar la actividad de Contacto
     public void launchContacto(View view) {
-        Intent intent = new Intent(this, ContactoActivity.class);
+        Intent intent = new Intent(this, Contacto.class);
         startActivity(intent);
     }
 }
