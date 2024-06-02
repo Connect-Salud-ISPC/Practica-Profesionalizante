@@ -31,3 +31,31 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Reserve.class);
         startActivity(intent);
     }
+
+    public void launchProfesionales(View view) {
+        Intent intent = new Intent(this, Profesionales.class);
+        startActivity(intent);
+    }
+
+    public void launchTurnos(View view) {
+        Intent intent = new Intent(this, Turnos.class);
+        startActivity(intent);
+    }
+
+    public void launchCerrarSesion(View view) {
+        // Limpiar SharedPreferences al cerrar sesión
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish(); // Cierra la actividad actual
+    }
+
+    // Método para lanzar la actividad de contacto
+    public void launchContacto(View view) {
+        Intent intent = new Intent(this, ContactoActivity.class);
+        startActivity(intent);
+    }
+}

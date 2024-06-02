@@ -1,96 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:text="Datos Personales"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textFontWeight="400"
-        android:layout_margin="20dp"
-        android:textSize="20dp"/>
-
-    <EditText
-        android:id="@+id/dni"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="DNI"
-        android:textColorHint="@color/black"
-        android:background="@color/light_grey"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Nombre"
-        android:textColorHint="@color/black"
-        android:background="@color/light_grey"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/apellido"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Apellido"
-        android:textColorHint="@color/black"
-        android:background="@color/light_grey"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/telefono"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Teléfono"
-        android:textColorHint="@color/black"
-        android:background="@color/light_grey"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/fecha_nacimiento"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Fecha de nacimiento"
-        android:textColorHint="@color/black"
-        android:background="@color/light_grey"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Email"
-        android:textColorHint="@color/black"
-        android:background="@color/light_grey"
-        android:layout_margin="10dp"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextDni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DNI"
+            android:inputType="number"
+            android:enabled="false" />
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextFechaNacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento (dd/mm/yyyy)"
+            android:inputType="date"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="8dp" />
 
         <Button
-            android:id="@+id/button_editar"
-            android:layout_width="510px"
-            android:layout_height="200px"
-            android:text="Editar"
-            android:layout_margin="5dp"
-            android:paddingRight="15dp"/>
-
-        <Button
-            android:id="@+id/button_guardar"
-            android:layout_width="510px"
-            android:layout_height="200px"
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Guardar"
-            android:layout_margin="5dp"
-            android:paddingLeft="15dp"
-            android:layout_gravity="center"/>
-
+            android:layout_marginTop="16dp"
+            android:onClick="saveProfile" />
     </LinearLayout>
-</LinearLayout>
+</ScrollView>
