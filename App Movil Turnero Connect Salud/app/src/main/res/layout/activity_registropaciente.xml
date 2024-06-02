@@ -14,7 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="DNI"
-            android:inputType="number" />
+            android:inputType="number"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextNombre"
@@ -22,7 +23,8 @@
             android:layout_height="wrap_content"
             android:hint="Nombre"
             android:inputType="textPersonName"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextApellido"
@@ -30,7 +32,8 @@
             android:layout_height="wrap_content"
             android:hint="Apellido"
             android:inputType="textPersonName"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextTelefono"
@@ -38,7 +41,8 @@
             android:layout_height="wrap_content"
             android:hint="Teléfono"
             android:inputType="phone"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextFechaNacimiento"
@@ -46,7 +50,8 @@
             android:layout_height="wrap_content"
             android:hint="Fecha de Nacimiento (dd/mm/yyyy)"
             android:inputType="date"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -54,7 +59,8 @@
             android:layout_height="wrap_content"
             android:hint="Correo Electrónico"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -62,7 +68,8 @@
             android:layout_height="wrap_content"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/editTextPasswordAgain"
@@ -70,7 +77,8 @@
             android:layout_height="wrap_content"
             android:hint="Repetir Contraseña"
             android:inputType="textPassword"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
         <Button
             android:id="@+id/buttonRegister"
