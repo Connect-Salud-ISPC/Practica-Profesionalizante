@@ -53,7 +53,7 @@ public class Home extends AppCompatActivity {
         finish(); // Cierra la actividad actual
     }
 
-    // Método para lanzar la actividad de contacto
+    // Método para lanzar la actividad de Contacto
     public void launchContacto(View view) {
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
