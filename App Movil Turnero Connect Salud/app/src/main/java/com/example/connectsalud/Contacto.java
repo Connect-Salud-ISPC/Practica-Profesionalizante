@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ContactoActivity extends AppCompatActivity {
+public class Contacto extends AppCompatActivity {
 
     private EditText editTextName;
     private EditText editTextEmail;
