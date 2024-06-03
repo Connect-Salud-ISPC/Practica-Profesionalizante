@@ -1,4 +1,4 @@
-# Proyecto-Integrador-ISPC
+# Turnero Conect Salud
 
 ## Aplicacion para realizar turnos basada en proyecto web Connect Salud
 (https://github.com/jhonnymonte/Fullstack-ISPC-2022) 
