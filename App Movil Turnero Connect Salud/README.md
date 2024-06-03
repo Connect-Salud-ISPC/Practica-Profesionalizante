@@ -5,14 +5,17 @@
 
 ## Miembros del Grupo:
 
-⦁	Montenegro, Jonathan
-
 ⦁	Coronel, Ediberto
 
 ⦁	Sanchez, Samira
 
 ⦁	Mingorance Pico, Desirée
 
-⦁	Soler,  Lucia
+⦁	Soler,  Lucía
 
-⦁	Carrazán, Maria
+⦁	Carrazán, Maria José
+
+⦁	Astarito, Celeste
+
+⦁	De Nieto, Gabriel
+

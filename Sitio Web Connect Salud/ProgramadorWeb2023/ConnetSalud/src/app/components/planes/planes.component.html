@@ -21,7 +21,7 @@
                         <li>Soporte por Email.</li>
                         <li>Acceso Basico al centro de Ayuda.</li>
                     </ul>
-                    <button routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
+                    <button *ngIf="isLoggedIn" routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
                         style="background-color: #FCEE7D">Ideal Para Empezar desde Cero</button>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                         <li>Soporte Basico por Email.</li>
                         <li>Acceso Limitado al centro de Ayuda.</li>
                     </ul>
-                    <button routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
+                    <button *ngIf="isLoggedIn" routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
                         style="background-color: #FCEE7D">Perfecto para Empezar</button>
                 </div>
             </div>
@@ -55,9 +55,9 @@
                         <li>Todas las características del Plan Estándar.</li>
                         <li>20 Consultas/mes.</li>
                         <li>Soporte prioritario por email, chat y teléfono.</li>
-                        <li>Acceso a webinars o entrenamientos exclusivos.</li>
+                        <li>Acceso a wecd cdbinars o entrenamientos exclusivos.</li>
                     </ul>
-                    <button routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
+                    <button *ngIf="isLoggedIn" routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
                         style="background-color: #FCEE7D">Diseñado Para Seguir</button>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         <li>Soporte VIP con respuesta rápida.</li>
                         <li>Acceso ilimitado a todas las funciones premium y avanzadas.</li>
                     </ul>
-                    <button routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
+                    <button *ngIf="isLoggedIn" routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
                         style="background-color: #FCEE7D">Necesitan lo máximo</button>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                         <li>Gestor especializado de cuenta personal.</li>
                         <li>Servicios adicionales.</li>
                     </ul>
-                    <button routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
+                    <button *ngIf="isLoggedIn" routerLink="/carrito" type="button" class="w-100 btn btn-lg btn-warning"
                         style="background-color: #FCEE7D">A medida para las empresas</button>
                 </div>
             </div>

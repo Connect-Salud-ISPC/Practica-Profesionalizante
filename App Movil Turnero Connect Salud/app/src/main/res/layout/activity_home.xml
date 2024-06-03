@@ -64,6 +64,8 @@
         app:layout_constraintTop_toBottomOf="@id/button_turnos"
         tools:text="@string/button_reserve" />
 
+    <!-- Button for launching ContactoActivity -->
+
     <Button
         android:id="@+id/button_profesionales"
         android:layout_width="0dp"
@@ -79,9 +81,26 @@
         android:textColorLink="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_reserve"
         tools:text="@string/button_profesionales" />
+
+    <Button
+        android:id="@+id/button_contacto"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="launchContacto"
+        android:text="Contacto"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_profesionales" />
 
     <Button
         android:id="@+id/button_cerrar_sesion"
@@ -100,10 +119,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_profesionales"
-        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="Cerrar Sesion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
