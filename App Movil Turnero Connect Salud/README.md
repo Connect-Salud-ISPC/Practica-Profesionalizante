@@ -1,4 +1,4 @@
-# Turnero Conect Salud
+# Turnero Connect Salud
 
 ## Aplicacion para realizar turnos basada en proyecto web Connect Salud
 (https://github.com/jhonnymonte/Fullstack-ISPC-2022) 
