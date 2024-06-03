@@ -1,22 +1,6 @@
 package com.example.connectsalud;
 
 import androidx.appcompat.app.AppCompatActivity;
-<<<<<<< HEAD
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.CalendarView;
-import android.widget.Spinner;
-import android.widget.Toast;
-import android.util.Log;
-
-
-public class Reserve extends AppCompatActivity {
-
-    private ReserveDatabaseHelper databaseHelper;
-    private Spinner spinnerEspecialidades, spinnerProfesionales;
-    private CalendarView calendarView;
-=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,24 +21,12 @@ public class Reserve extends AppCompatActivity {
     private DatePicker datePicker;
     private TimePicker timePicker;
     private long reservaId = -1;
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserve);
 
-<<<<<<< HEAD
-        // Inicializar el ayudante de la base de datos
-        databaseHelper = new ReserveDatabaseHelper(this);
-
-        // Obtener referencias a los elementos de la interfaz de usuario
-        spinnerEspecialidades = findViewById(R.id.spinner_especialidad);
-        spinnerProfesionales = findViewById(R.id.spinner_profesionales);
-        calendarView = findViewById(R.id.calendar);
-
-        // Configurar adaptadores para los Spinners
-=======
         databaseHelper = new ReserveDatabaseHelper(this);
 
         spinnerEspecialidades = findViewById(R.id.spinner_especialidad);
@@ -62,7 +34,6 @@ public class Reserve extends AppCompatActivity {
         datePicker = findViewById(R.id.datePicker);
         timePicker = findViewById(R.id.time_picker);
 
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d
         ArrayAdapter<CharSequence> especialidadesAdapter = ArrayAdapter.createFromResource(
                 this, R.array.item_esp, android.R.layout.simple_spinner_item);
         especialidadesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -73,42 +44,6 @@ public class Reserve extends AppCompatActivity {
         profesionalesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerProfesionales.setAdapter(profesionalesAdapter);
 
-<<<<<<< HEAD
-        // Configurar listener para el CalendarView
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                // Obtener la fecha seleccionada
-                String fechaSeleccionada = year + "-" + (month + 1) + "-" + dayOfMonth;
-                // Realizar operaciones con la fecha seleccionada según sea necesario
-            }
-        });
-    }
-
-    // Cuando el usuario confirma la reserva (por ejemplo, al hacer clic en un botón de reserva)
-    public void confirmarReserva(View view) {
-        // Obtener los datos seleccionados por el usuario
-        String especialidad = spinnerEspecialidades.getSelectedItem().toString();
-        String profesional = spinnerProfesionales.getSelectedItem().toString();
-        String fecha = obtenerFechaSeleccionada();
-        String hora = obtenerhoraSeleccionada();
-
-        Log.d("Reserva", "Especialidad: " + especialidad);
-        Log.d("Reserva", "Profesional: " + profesional);
-        Log.d("Reserva", "Fecha: " + fecha);
-        Log.d("Reserva", "Hora: " + hora);
-
-        // Insertar la reserva en la base de datos
-        long reservaId = databaseHelper.insertReserva(especialidad, profesional, fecha);
-
-        // Mostrar un mensaje al usuario
-        if (reservaId != -1) {
-            // La inserción fue exitosa, mostrar mensaje "turno reservado"
-            showToast("Turno reservado");
-        } else {
-            // La inserción falló, mostrar mensaje de error si es necesario
-            showToast("Error al reservar el turno");
-=======
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, 1);
         datePicker.setMinDate(calendar.getTimeInMillis());
@@ -210,21 +145,10 @@ public class Reserve extends AppCompatActivity {
             }
         } else {
             showToast("No hay turno seleccionado para cancelar");
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d
         }
     }
 
     private String obtenerFechaSeleccionada() {
-<<<<<<< HEAD
-        // Implementa lógica para obtener la fecha seleccionada del CalendarView
-        // Por ejemplo, podrías obtenerla como una cadena en el formato deseado
-        // (año-mes-día) y devolverla desde este método
-        return "15-11-2023 10:30"; // Ejemplo de fecha seleccionada (debes implementar la lógica real)
-    }
-    private String obtenerhoraSeleccionada() {
-        return "09:00";
-    }
-=======
         int year = datePicker.getYear();
         int month = datePicker.getMonth() + 1;
         int day = datePicker.getDayOfMonth();
@@ -237,7 +161,6 @@ public class Reserve extends AppCompatActivity {
         return String.format(Locale.getDefault(), "%02d:%02d", hour, minute);
     }
 
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
@@ -245,15 +168,6 @@ public class Reserve extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-<<<<<<< HEAD
-        // Cerrar el ayudante de la base de datos al destruir la actividad
-        if (databaseHelper != null) {
-            databaseHelper.close();
-        }
-    }
-}
-=======
         databaseHelper.close();
     }
 }
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d

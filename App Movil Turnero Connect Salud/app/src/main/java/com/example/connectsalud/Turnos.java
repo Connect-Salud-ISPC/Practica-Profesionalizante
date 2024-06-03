@@ -1,13 +1,5 @@
 package com.example.connectsalud;
 
-<<<<<<< HEAD
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-public class Turnos extends AppCompatActivity {
-
-=======
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -22,13 +14,10 @@ public class Turnos extends AppCompatActivity {
     private ReserveDatabaseHelper databaseHelper;
     private ListView listViewReservas;
 
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnos);
-<<<<<<< HEAD
-=======
 
         databaseHelper = new ReserveDatabaseHelper(this);
         listViewReservas = findViewById(R.id.listViewReservas);
@@ -65,6 +54,5 @@ public class Turnos extends AppCompatActivity {
                 R.layout.reserva_item, cursor, from, to, 0);
 
         listViewReservas.setAdapter(adapter);
->>>>>>> 57c99725ee5aedee86c5302d43a5accc693b204d
     }
 }
